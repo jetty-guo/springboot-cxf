@@ -2,7 +2,6 @@ package com.guoshuai;
 
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.io.WriteAbortedException;
 import java.io.Writer;
 
 import javax.xml.bind.JAXBContext;
