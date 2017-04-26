@@ -30,6 +30,11 @@
 			<artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
 			<version>3.1.11</version>
 		</dependency>
+		
+		 <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -51,16 +56,33 @@
 		</dependency>
 
 		<dependency>
-
 			<groupId>org.springframework.boot</groupId>
-
-			<artifactId>spring-boot-devtools</artifactId>
-
-			<optional>true</optional>
-
-			<scope>true</scope>
-
+			<artifactId>spring-boot-starter-activemq</artifactId>
 		</dependency>
+		
+		 <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-broker</artifactId>
+        </dependency>
+        
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>true</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -69,22 +91,22 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			   <plugin>
 
-                   <groupId>org.springframework.boot</groupId>
+			<plugin>
 
-                   <artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
 
-                   <configuration>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 
-                            <!--fork:  如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+				<configuration>
 
-                       <fork>true</fork>
+					<!--fork: 如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
 
-                   </configuration>
+					<fork>true</fork>
 
-               </plugin>
+				</configuration>
+
+			</plugin>
 
 		</plugins>
 	</build>
